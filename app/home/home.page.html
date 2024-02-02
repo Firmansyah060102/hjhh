@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Upload Image
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+   <ion-row>
+     <ion-col col-12>
+      <ion-item>
+         <p style="color:#488aff">Foto</p> 
+        <button ion-button color="secondary" (click)="presentActionSheet()">Choose File</button>{{imageFileName}}
+        <button ion-button (click)="uploadFile()">Upload</button>
+      </ion-item>  
+      <img *ngIf="GetImageNameUpload" src="http://10.0.2.2/blog/upload-image-ionic/uploads/{{GetImageNameUpload}}" width="80%">
+      
+     </ion-col>
+   </ion-row>
+  </ion-grid>
+</ion-content>
